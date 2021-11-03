@@ -13,6 +13,16 @@ const connect = function () {
     // code that does something when the connection is first established
     console.log("Successfully connected to game server");
     conn.write("Name: KBZ");
+    //setTimeout(() => conn.write("Move: up"), 1000);
+    //setTimeout(() => conn.write("Move: up"), 2000);
+    setInterval(() => conn.write("Move: up"), 1000);
+    setInterval(() => conn.write("Move: left"), 2000);
+    setInterval(() => conn.write("Move: down"), 3000);
+    //setTimeout(() => conn.write("Move: down"), 4000);
+    setInterval(() => conn.write("Move: right"), 4000);
+
+
+
   });
 
   conn.on("end", () => {
