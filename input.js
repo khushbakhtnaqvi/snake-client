@@ -32,6 +32,15 @@ const handleUserInput = function (key) {
         clearInterval(timer);
         timer = setInterval(() => connection.write(keys.d), time);
         break;
+      case '\u006E':
+        connection.write(keys.n)
+        break;
+      case '\u006D':
+        connection.write(keys.m)
+        break;
+      case '\u006C':
+        connection.write(keys.l)
+        break;
       }
 };
 
